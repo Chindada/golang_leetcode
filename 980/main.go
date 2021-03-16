@@ -1,7 +1,11 @@
 package main
 
 func main() {
-	grid := [][]int{{1, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 2, -1}}
+	grid := [][]int{
+		{1, 0, 0, 0},
+		{0, 0, 0, 0},
+		{0, 0, 2, -1},
+	}
 	uniquePathsIII(grid)
 }
 
