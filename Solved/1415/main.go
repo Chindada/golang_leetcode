@@ -3,12 +3,16 @@ package main
 import "fmt"
 
 func main() {
-	n := 2
-	k := 7
+	n := 1
+	k := 2
 	// for k := 1; k < 10; k++ {
 	// 	fmt.Println(getHappyString(n, k))
 	// }
 	// getHappyString(n, k)
+	// fmt.Println(getHappyString(n, k))
+	// var ttt []byte
+	// ttt = append(ttt, 97, 98, 99)
+	// fmt.Println(string(ttt))
 	fmt.Println(getHappyString(n, k))
 }
 
@@ -109,4 +113,58 @@ func getHappyString2(n int, k int) string {
 		k %= tot
 	}
 	return string(ans)
+}
+
+func getHappyString3(n int, k int) string {
+	if n == 1 {
+		if k == 1 {
+			return "a"
+		}
+		if k == 2 {
+			return "b"
+		}
+		if k == 3 {
+			return "c"
+		}
+		if k > 3 {
+			return ""
+		}
+	}
+	branchNumber := 1
+	for i := 1; i <= n-1; i++ {
+		branchNumber *= 2
+	}
+	if k > branchNumber*3 {
+		return ""
+	}
+	var letters [][]string
+	letters = append(letters, []string{"a"})
+	letters = append(letters, []string{"b"})
+	letters = append(letters, []string{"c"})
+	for {
+		var tmp [][]string
+		for i := 0; i < len(letters); i++ {
+			aa := make([]string, len(letters[i]))
+			bb := make([]string, len(letters[i]))
+			copy(aa, letters[i])
+			copy(bb, letters[i])
+			if letters[i][len(letters[i])-1] == "a" {
+				aa = append(aa, "b")
+				bb = append(bb, "c")
+			} else if letters[i][len(letters[i])-1] == "b" {
+				aa = append(aa, "a")
+				bb = append(bb, "c")
+			} else if letters[i][len(letters[i])-1] == "c" {
+				aa = append(aa, "a")
+				bb = append(bb, "b")
+			}
+			tmp = append(tmp, aa)
+			tmp = append(tmp, bb)
+		}
+		letters = tmp
+		if len(letters) == branchNumber*3 {
+			break
+		}
+	}
+	return "ans"
 }
