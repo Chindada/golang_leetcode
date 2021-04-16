@@ -11,29 +11,23 @@ func main() {
 	allPossibleFBT(7)
 }
 
-func allPossibleFBT(n int) []*TreeNode {
-	// total := n/3 + 1
-	// // var possibleArr []int
-	// half := TreeNode{
-	// 	Val: 0,
-	// }
-	full := TreeNode{
-		Val: 0,
-		Left: &TreeNode{
-			Val: 0,
-		},
-		Right: &TreeNode{
-			Val: 0,
+func allPossibleFBT(N int) []*TreeNode {
+	if N%2 == 0 {
+		return []*TreeNode{}
+	}
+	d := [20][]*TreeNode{
+		1: {
+			&TreeNode{},
 		},
 	}
-	var input TreeNode
-	number := 3
-	if input.Left.Left == nil || input.Right.Right == nil {
-		input.Left = &full
-		number += 2
-		if number < n {
-			input.Right = &full
+	for n := 3; n <= N; n += 2 {
+		for i := 1; i < n; i += 2 {
+			for _, left := range d[i] {
+				for _, right := range d[n-i-1] {
+					d[n] = append(d[n], &TreeNode{Left: left, Right: right})
+				}
+			}
 		}
 	}
-	return nil
+	return d[N]
 }
