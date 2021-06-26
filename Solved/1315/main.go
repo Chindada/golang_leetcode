@@ -6,7 +6,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func sumEvenGrandparent(root *TreeNode) int {
+func SumEvenGrandparent(root *TreeNode) int {
 	var nodesSum []int
 	var ans int
 	var rfunc func(*TreeNode)
@@ -44,23 +44,23 @@ func sumEvenGrandparent(root *TreeNode) int {
 	return ans
 }
 
-func sumEvenGrandparent2(root *TreeNode) int {
+func SumEvenGrandparent2(root *TreeNode) int {
 	ans := 0
-	helper(root, &ans, 0, nil, nil)
+	Helper(root, &ans, 0, nil, nil)
 	return ans
 }
 
 // 98.84% faster and 66.28% memory.
-func helper(root *TreeNode, ans *int, depth int, parent, grandpa *TreeNode) {
+func Helper(root *TreeNode, ans *int, depth int, parent, grandpa *TreeNode) {
 	if depth >= 2 {
 		if grandpa != nil && grandpa.Val%2 == 0 {
 			*ans += root.Val
 		}
 	}
 	if root.Left != nil {
-		helper(root.Left, ans, depth+1, root, parent)
+		Helper(root.Left, ans, depth+1, root, parent)
 	}
 	if root.Right != nil {
-		helper(root.Right, ans, depth+1, root, parent)
+		Helper(root.Right, ans, depth+1, root, parent)
 	}
 }

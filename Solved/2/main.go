@@ -8,7 +8,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	var l1Arr []int
 	var l2Arr []int
 	tempNodes1 := l1
@@ -22,8 +22,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		tempNodes2 = tempNodes2.Next
 	}
 	fmt.Println(l1Arr, l2Arr)
-	var tempArr []int
-	tempArr = compareLength(l1Arr, l2Arr)
+	tempArr := compareLength(l1Arr, l2Arr)
 	fmt.Println(tempArr)
 	headNode := ListNode{
 		Val: tempArr[0],

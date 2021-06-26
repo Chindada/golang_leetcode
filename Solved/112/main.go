@@ -7,7 +7,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func hasPathSum(root *TreeNode, sum int) bool {
+func HasPathSum(root *TreeNode, sum int) bool {
 	var ans bool
 	var rfunc func(*TreeNode, int)
 	rfunc = func(input *TreeNode, tempSum int) {

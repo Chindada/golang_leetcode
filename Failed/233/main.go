@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func countDigitOne(n int) int {
+func CountDigitOne(n int) int {
 	q := []byte("1")
 	var i int
 	inChan := make(chan byte)

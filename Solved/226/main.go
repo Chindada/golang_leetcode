@@ -7,7 +7,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func invertTree(root *TreeNode) *TreeNode {
+func InvertTree(root *TreeNode) *TreeNode {
 	var rfunc func(*TreeNode)
 	rfunc = func(input *TreeNode) {
 		if input == nil {

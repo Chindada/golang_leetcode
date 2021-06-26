@@ -1,6 +1,6 @@
 package main
 
-func judgeSquareSum(c int) bool {
+func JudgeSquareSum(c int) bool {
 	var a2, b2 []int
 	for i := 0; i*i <= c; i++ {
 		a2 = append(a2, i)

@@ -31,8 +31,7 @@ func (u *SubrectangleQueries) UpdateSubrectangle(row1 int, col1 int, row2 int, c
 
 // GetValue GetValue
 func (u *SubrectangleQueries) GetValue(row int, col int) int {
-	var ans int
-	ans = u.axisValue[row][col]
+	ans := u.axisValue[row][col]
 	return ans
 }
 

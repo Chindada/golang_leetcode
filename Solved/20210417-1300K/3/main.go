@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // You are given a string S consisting of N letters 'a' and/or 'b. In one move, you can swap one letter for
 // the other ('a' for 'b' or 'b' for 'a').
 
@@ -19,7 +21,7 @@ package main
 
 func main() {
 	S := "baaaaa"
-	Solution(S)
+	fmt.Println(Solution(S))
 }
 
 func Solution(S string) int {

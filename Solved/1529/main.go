@@ -1,8 +1,10 @@
 package main
 
+import "fmt"
+
 func main() {
 	target := "00000"
-	minFlips(target)
+	fmt.Println(minFlips(target))
 }
 
 func minFlips(target string) int {

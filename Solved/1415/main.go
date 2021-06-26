@@ -85,7 +85,7 @@ func getHappyString(n int, k int) string {
 	return letters[position]
 }
 
-func getHappyString2(n int, k int) string {
+func GetHappyString2(n int, k int) string {
 	tot := 3
 	for i := 1; i < n; i++ {
 		tot <<= 1
@@ -115,7 +115,7 @@ func getHappyString2(n int, k int) string {
 	return string(ans)
 }
 
-func getHappyString3(n int, k int) string {
+func GetHappyString3(n int, k int) string {
 	if n == 1 {
 		if k == 1 {
 			return "a"

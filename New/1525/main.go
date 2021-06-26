@@ -1,8 +1,10 @@
 package main
 
+import "fmt"
+
 func main() {
 	s := "aacaba"
-	numSplits(s)
+	fmt.Println(numSplits(s))
 }
 
 func numSplits(s string) int {

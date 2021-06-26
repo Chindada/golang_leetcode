@@ -1,6 +1,6 @@
 package main
 
-func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
+func FindMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	var a float64
 	var merged []int
 	var i, j int

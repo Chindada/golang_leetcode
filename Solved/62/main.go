@@ -38,7 +38,7 @@ func uniquePaths(m int, n int) int {
 	return ans
 }
 
-func uniquePaths2(m int, n int) int {
+func UniquePaths2(m int, n int) int {
 	if m < 1 || n < 1 {
 		return 0
 	}

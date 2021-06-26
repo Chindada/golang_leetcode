@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func lengthOfLongestSubstring(s string) int {
+func LengthOfLongestSubstring(s string) int {
 	var a int
 	var tmp int
 	lenthOfString := len(s)
