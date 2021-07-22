@@ -2,17 +2,17 @@ package main
 
 import (
 	"fmt"
-	"strconv"
+
+	"github.com/fatih/color"
 )
 
 func main() {
-	// a := 1
-	// b := 0
-	// fmt.Println(a / b)
-
-	_, err := strconv.ParseFloat("123.33", 64)
-	fmt.Println(fmt.Errorf("XXX: %w", err))
-	if fmt.Errorf("XXX: %w", err) == nil {
-		fmt.Println("123")
-	}
+	critical := color.New(color.Bold, color.FgHiRed).SprintFunc()
+	poor := color.New(color.Bold, color.FgGreen).SprintFunc()
+	a := 8.988765678
+	b := 1.1
+	aString := fmt.Sprintf("%5.2f", a)
+	bString := fmt.Sprintf("%5.2f", b)
+	x := critical(aString)
+	fmt.Printf("%2s %2s dadsf\n", x, poor(bString))
 }
