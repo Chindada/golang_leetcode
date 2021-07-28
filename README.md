@@ -1,5 +1,7 @@
 # golang_leetcode
+
 ## GPG Key Generation
+
 ```sh
 gpg --full-generate-key
 gpg --list-secret-keys --keyid-format LONG
@@ -9,7 +11,9 @@ gpg --armor --export-secret-key timhsu.2030@hotmail.com > /Users/timhsu/dev_proj
 gpg --delete-secret-key `key-ID`
 gpg --delete-key `key-ID`
 ```
+
 ## Import GPG
+
 ```sh
 apt install -y gawk
 rm -rf ./git-secret
@@ -26,6 +30,7 @@ gpg --edit-key timhsu.2030@hotmail.com
 ```
 
 ## Git-Secret
+
 ```sh
 git secret init
 git secret tell timhsu.2030@hotmail.com
@@ -34,7 +39,6 @@ git secret hide
 git secret reveal
 ```
 
-# HODGEPODGE
 ```py
 def print_to_stdout(*a):
     print(*a, file=sys.stdout)
@@ -49,6 +53,7 @@ while i <= 10:
     if i == 10:
         i = 1
 ```
+
 ```go
 qb, _ := orm.NewQueryBuilder("mysql")
 qb.Select("*").
@@ -58,17 +63,20 @@ qb.Select("*").
 sql := qb.String()
 o.Raw(sql, startTime, endTime).QueryRows(&result)
 ```
+
 ```go
 _, err = db.Exec("DROP TABLE IF EXISTS " + dbName + ".basic_stock;")
 if err != nil {
-	panic(err)
+ panic(err)
 }
 
 sort.Slice(res, func(i, j int) bool {
     return res[i].TS < res[j].TS
 })
 ```
-# proto
+
+## proto
+
 ```sh
 git reset -- hard
 git clean -fxd
