@@ -47,6 +47,7 @@ func main() {
 	tmp := UpdateVolumeArrBody{
 		StockNumArr: arr,
 	}
+
 	client := resty.New()
 	resp, err := client.R().
 		SetBody(&tmp).
