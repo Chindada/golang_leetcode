@@ -18,6 +18,7 @@ func main() {
 		fmt.Printf("Buy Price: %d, Sell Price: %d, Diff: %d\n", GetStockBuyCost(roundPrice, 1), GetStockSellCost(oneTick, 1), GetStockSellCost(oneTick, 1)-GetStockBuyCost(roundPrice, 1))
 		price += 0.05
 	}
+
 }
 
 var TradeQuota int64 = 1000000
