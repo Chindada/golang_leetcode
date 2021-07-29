@@ -11,6 +11,7 @@ func main() {
 	}{
 		Response: "fail",
 	}
+
 	aJson, _ := json.Marshal(a)
 	fmt.Println(string(aJson))
 	res := struct {
