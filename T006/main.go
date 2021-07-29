@@ -14,6 +14,7 @@ func main() {
 
 	aJson, _ := json.Marshal(a)
 	fmt.Println(string(aJson))
+
 	res := struct {
 		Response string `json:"response"`
 	}{}
