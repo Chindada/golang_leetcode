@@ -43,7 +43,7 @@ type AuthSucesC struct {
 }
 
 func main() {
-	arr := append([]string{}, "233ddssddddddddd0", "260d9")
+	arr := append([]string{}, "233ddssddddddddddd0", "260d9")
 	tmp := UpdateVolumeArrBody{
 		StockNumArr: arr,
 	}
