@@ -21,6 +21,6 @@ func main() {
 	}{}
 	json.Unmarshal(aJson, &res)
 	fmt.Println(res.Response)
-	c := "{\"response\":\"faild\"}"
+	c := "{\"respddonse\":\"faild\"}"
 	fmt.Println(c)
 }
