@@ -14,7 +14,7 @@ func main() {
 			break
 		}
 		oneTick := GetNewClose(roundPrice, 1)
-		fmt.Printf("original: %f, one tick: %f, diff: %f, ", roundPrice, oneTick, oneTick-roundPrice)
+		fmt.Printf("originadl: %f, one tick: %f, diff: %f, ", roundPrice, oneTick, oneTick-roundPrice)
 		fmt.Printf("Buy Price: %d, Sell Price: %d, Diff: %d\n", GetStockBuyCost(roundPrice, 1), GetStockSellCost(oneTick, 1), GetStockSellCost(oneTick, 1)-GetStockBuyCost(roundPrice, 1))
 		price += 0.05
 
